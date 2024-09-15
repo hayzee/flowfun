@@ -1,0 +1,20 @@
+{
+  "name": "flowfun",
+  "version": "1.0.0",
+  "description": "Flow Fun",
+  "scripts": {
+    "server": "shadow-cljs server",
+    "watch": "shadow-cljs watch app",
+    "compile": "shadow-cljs compile app"
+  },
+  "author": "",
+  "license": "MPL-2.0",
+  "devDependencies": {
+    "shadow-cljs": "^2.26.2"
+  },
+  "dependencies": {
+    "create-react-class": "^15.7.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  }
+}

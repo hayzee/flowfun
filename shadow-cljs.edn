@@ -1,0 +1,16 @@
+{:dev-http {8888 "public"}
+
+ :dependencies
+ [[reagent "1.2.0"]]
+
+ :source-paths
+ ["src"]
+
+ :builds
+ {:app {:target :browser
+        :output-dir "public/js"
+        :asset-path "/js"
+        :modules {:main {:entries [flowfun.main]
+                         :init-fn flowfun.main/init}}
+        :devtools {:before-load  flowfun.main/stop
+                   :after-load   flowfun.main/start}}}}
