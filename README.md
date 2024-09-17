@@ -4,25 +4,17 @@ Clojurescript starter project with shadow-cljs and Flowbite.
 
 ## Usage
 
-1. Install
+`$ npm install`
 
-$ npm install
+`$ npm run watch`
 
-2. Start the server
+Goto http://localhost:8888/
 
-$ npm run watch
+`$ lein repl :connect localhost:56789`
 
-3. Open browser 
+`shadow.user=>` `(shadow/repl :app)`
 
-http://localhost:8888/
-
-4. Start clojurescript repl (IntelliJ/Cursive)
-
-First configure and start a new nRepl that connects to the standard port file.
-
-> (shadow/repl :app)
-
-You are now live coding!
+`cljs.user=>` `(js/alert "Now we're suckin' diesel.")`
 
 ## License
 

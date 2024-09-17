@@ -6,6 +6,9 @@
  :source-paths
  ["src"]
 
+ :nrepl {:port 56789
+         :middleware []}
+
  :builds
  {:app {:target :browser
         :output-dir "public/js"
