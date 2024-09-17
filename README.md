@@ -1,6 +1,6 @@
 # flowfun
 
-Clojurescript starter project with shadow-cljs.
+Clojurescript starter project with shadow-cljs and Flowbite.
 
 ## Usage
 
