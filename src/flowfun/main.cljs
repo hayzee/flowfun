@@ -11,7 +11,8 @@
   []
   (println "starting")
   (rdom/render [app/component] app)
-  (println "started"))
+  (println "started")
+  (flowfun.components.layout.nav/init-dark))
 
 (defn stop
   []
