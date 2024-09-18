@@ -7,7 +7,7 @@
     (.add (.-classList (.-documentElement js/document)) "dark")))
 
 (defn toggle-dark
-  [ev x]
+  [ev]
   (if (local/get-item "dark")
     (do
      (.remove (.-classList (.-documentElement js/document)) "dark")

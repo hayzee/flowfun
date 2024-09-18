@@ -1,5 +1,13 @@
 (ns flowfun.components.layout.content)
 
+(defn row
+  []
+  )
+
+(defn panel
+  []
+  )
+
 (defn component
   []
   [:div

@@ -6,7 +6,7 @@
 
 (defn set-item
   [item value]
-  (.setItem js/localStorage item val))
+  (.setItem js/localStorage item value))
 
 (defn remove-item
   [item]
