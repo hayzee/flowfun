@@ -1,7 +1,8 @@
 (ns flowfun.main
-  (:require [goog.dom :as dom]
-            [reagent.dom :as rdom]
-            [flowfun.components.layout.app :as app]))
+  (:require
+    [goog.dom :as dom]
+    [reagent.dom :as rdom]
+    [flowfun.components.layout.app :as app]))
 
 (def app (dom/getElement "app"))
 
