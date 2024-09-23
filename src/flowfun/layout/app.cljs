@@ -1,7 +1,7 @@
-(ns flowfun.components.layout.app
-  (:require [flowfun.components.layout.nav :as nav]
-            [flowfun.components.layout.sidebar :as sidebar]
-            [flowfun.components.layout.panel :as panel]))
+(ns flowfun.layout.app
+  (:require [flowfun.layout.nav :as nav]
+            [flowfun.layout.sidebar :as sidebar]
+            [flowfun.layout.panel :as panel]))
 
 (defn component
   []

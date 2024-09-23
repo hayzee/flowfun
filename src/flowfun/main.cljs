@@ -1,7 +1,8 @@
 (ns flowfun.main
   (:require [goog.dom :as dom]
             [reagent.dom :as rdom]
-            [flowfun.components.layout.app :as app]))
+            [flowfun.layout.app :as app]
+            [flowfun.utilitiles.dark :as dark]))
 
 (def app (dom/getElement "app"))
 
@@ -12,7 +13,7 @@
   (println "starting")
   (rdom/render [app/component] app)
   (println "started")
-  (flowfun.layout.nav/init-dark))
+  (dark/init-dark))
 
 (defn stop
   []

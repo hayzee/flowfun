@@ -1,20 +1,5 @@
 (ns flowfun.layout.nav
-  (:require [flowfun.local :as local]))
-
-(defn init-dark
-  []
-  (when (local/get-item "dark")
-    (.add (.-classList (.-documentElement js/document)) "dark")))
-
-(defn toggle-dark
-  [ev]
-  (if (local/get-item "dark")
-    (do
-     (.remove (.-classList (.-documentElement js/document)) "dark")
-     (local/remove-item "dark"))
-    (do
-      (.add (.-classList (.-documentElement js/document)) "dark")
-      (local/set-item "dark" true))))
+  (:require [flowfun.utilitiles.dark :as dark]))
 
 (defn component
   []
@@ -66,7 +51,7 @@
          :type "button",
          :class
          "text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5"
-         :on-click toggle-dark}
+         :on-click dark/toggle-dark}
         [:svg
          {:id "theme-toggle-dark-icon",
           :class "hidden w-5 h-5",

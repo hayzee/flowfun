@@ -1,34 +1,10 @@
 (ns flowfun.layout.panel
   (:require [reagent.core :as r]
-            [flowfun.state :as state]))
+            [flowfun.components.panel-row :refer [row-n]]
+            [flowfun.state :as state]
+            [flowfun.pages.example :as example]))
 
 ;; row-n
-
-(def dummy-plus-symbol
-  [:svg
-     {:class "w-3.5 h-3.5",
-      :aria-hidden "true",
-      :xmlns "http://www.w3.org/2000/svg",
-      :fill "none",
-      :viewBox "0 0 18 18"}
-     [:path
-      {:stroke "currentColor",
-       :stroke-linecap "round",
-       :stroke-linejoin "round",
-       :stroke-width "2",
-       :d "M9 1v16M1 9h16"}]])
-
-(defn dummy-content
-  []
-  (let [n (r/atom 0)]
-   (fn []
-     [:div
-      {:class "flex items-center justify-center h-36 rounded bg-gray-50 dark:bg-gray-700"
-       :on-click #(swap! n inc)}
-      [:p
-       {:class "text-2xl text-gray-400 dark:text-gray-500"}
-       @n
-       ]])))
 
 (defn form-content
   []
@@ -84,27 +60,6 @@
       "text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"}
      "Submit"]]])
 
-(defn row-n
-  [n & components]
-  (let [classes (str "grid grid-cols-"n" gap-4 mb-4")]
-    (into [:div
-           {:class classes}]
-          (or components (repeat n [dummy-content])))))
-
-(defn example-page
-  []
-  [:div
-   {:class
-    "p-4 border-2 border-gray-200 border-dashed rounded-lg dark:border-gray-700 mt-14"}
-   [row-n 1]
-   [row-n 2]
-   [row-n 3]
-   [row-n 4]
-   [row-n 5]
-   [row-n 6]
-   [row-n 7]
-   [row-n 8]
-   [row-n 10]])
 
 (defn start-page
   []
@@ -241,7 +196,7 @@
   [:div
    {:class "p-4 sm:ml-64"}
    (case (:current-page @state/app)
-     "example-page" [example-page]
+     "example-page" [example/example-page]
      "start-page" [start-page]
      "some-other-page" [some-other-page]
      "form-page" [form-page])])
