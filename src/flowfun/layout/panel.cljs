@@ -1,4 +1,4 @@
-(ns flowfun.components.content.panel
+(ns flowfun.components.layout.panel
   (:require [reagent.core :as r]
             [flowfun.state :as state]))
 
