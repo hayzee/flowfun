@@ -3,7 +3,7 @@
 
 (def app
   (r/atom {:current-page "example-page"}))
-
+e
 (defn set-current-page
   [page-name]
   (swap! app assoc :current-page page-name))

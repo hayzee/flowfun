@@ -1,4 +1,4 @@
-(ns flowfun.components.layout.nav
+(ns flowfun.layout.nav
   (:require [flowfun.local :as local]))
 
 (defn init-dark
@@ -55,7 +55,7 @@
       [:span
        {:class
         "self-center text-xl font-semibold sm:text-2xl whitespace-nowrap dark:text-white"}
-       "Flowbite"]]]
+       "Mega App"]]]
     [:div
      {:class "flex items-center"}
      [:div
@@ -115,7 +115,7 @@
          {:class
           "text-sm font-medium text-gray-900 truncate dark:text-gray-300",
           :role "none"}
-         "neil.sims@flowbite.com"]]
+         "bob.smith@petersoft.com"]]
        [:ul
         {:class "py-1", :role "none"}
         [:li
