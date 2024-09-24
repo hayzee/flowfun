@@ -1,4 +1,4 @@
-(ns flowfun.pages.example
+(ns flowfun.pages.example-02
   (:require [flowfun.components.dummy :as dummy]
             [flowfun.components.panel-row :as panel-row]))
 

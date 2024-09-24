@@ -6,7 +6,7 @@
 
 (def app (dom/getElement "app"))
 
-; Lifecycle hooks
+; Lifecycle start/stop
 
 (defn start
   []
