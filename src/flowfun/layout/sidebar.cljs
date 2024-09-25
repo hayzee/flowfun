@@ -1,5 +1,6 @@
 (ns flowfun.layout.sidebar
-  (:require [flowfun.state :as state]))
+  (:require [flowfun.state :as state]
+            [flowfun.pages.core :as pages-core]))
 
 (defn menu-item
   [text & {:as opts}]
@@ -188,13 +189,5 @@
        [:span {:class "flex-1 ms-3 whitespace-nowrap"} "Sign Up"]]]]
     [:ul
      {:class "pt-4 mt-4 space-y-2 font-medium border-t border-gray-200 dark:border-gray-700"}
-     [menu-item "Example Page" :on-click #(state/set-current-page "example-page")]
-     [menu-item "Start Page" :on-click #(state/set-current-page "start-page")]
-     [menu-item "Some Other Page" :on-click #(state/set-current-page "some-other-page")]
-     [menu-item "Form Page" :on-click #(state/set-current-page "form-page")]]
-    [:ul
-     {:class "pt-4 mt-4 space-y-2 font-medium border-t border-gray-200 dark:border-gray-700"}
-     [menu-item "Example Page" :on-click #(state/set-current-page "example-page")]
-     [menu-item "Start Page" :on-click #(state/set-current-page "start-page")]
-     [menu-item "Some Other Page" :on-click #(state/set-current-page "some-other-page")]
-     [menu-item "Form Page" :on-click #(state/set-current-page "form-page")]]]])
+     [menu-item "Example Page" :on-click #(state/set-current-page pages-core/example-page)]
+     [menu-item "Example2 Page" :on-click #(state/set-current-page pages-core/example-02-page)]]]])

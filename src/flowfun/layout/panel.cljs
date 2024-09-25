@@ -1,5 +1,6 @@
 (ns flowfun.layout.panel
-  (:require [reagent.core :as r]
+  (:require [flowfun.pages.core :as pages-core]
+            [reagent.core :as r]
             [flowfun.components.panel-row :refer [row-n]]
             [flowfun.state :as state]
             [flowfun.pages.example :as example]))
@@ -195,8 +196,4 @@
   []
   [:div
    {:class "p-4 sm:ml-64"}
-   (case (:current-page @state/app)
-     "example-page" [example/example-page]
-     "start-page" [start-page]
-     "some-other-page" [some-other-page]
-     "form-page" [form-page])])
+   [(get pages-core/pages (:current-page @state/app))]])
