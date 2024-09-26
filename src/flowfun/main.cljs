@@ -2,7 +2,7 @@
   (:require [goog.dom :as dom]
             [reagent.dom :as rdom]
             [flowfun.layout.app :as app]
-            [flowfun.utilitiles.dark :as dark]))
+            [flowfun.utilities.dark :as dark]))
 
 (def app (dom/getElement "app"))
 
@@ -12,8 +12,8 @@
   []
   (println "starting")
   (rdom/render [app/component] app)
-  (println "started")
-  (dark/init-dark))
+  (dark/init-dark)
+  (println "started"))
 
 (defn stop
   []
