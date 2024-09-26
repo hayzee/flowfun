@@ -1,5 +1,5 @@
 (ns flowfun.layout.nav
-  (:require [flowfun.utilitiles.dark :as dark]))
+  (:require [flowfun.utilities.dark :as dark]))
 
 (defn component
   []
@@ -32,17 +32,18 @@
          :d
          "M2 4.75A.75.75 0 012.75 4h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 4.75zm0 10.5a.75.75 0 01.75-.75h7.5a.75.75 0 010 1.5h-7.5a.75.75 0 01-.75-.75zM2 10a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 10z"}]]]
      [:a
-      {:href "https://flowbite.com", :class "flex ms-2 md:me-24"}
+      {:href "https://github.com/hayzee/flowfun", :class "flex ms-2 md:me-24"}
       [:img
-       {:src "https://flowbite.com/docs/images/logo.svg",
-        :class "h-8 me-3",
-        :alt "FlowBite Logo"}]
+       {:src "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Mega_Brands_logo.png/800px-Mega_Brands_logo.png",
+        :class "h-8 me-3 mb-3",
+        :alt "Petersoft Logo"}]
       [:span
        {:class
         "self-center text-xl font-semibold sm:text-2xl whitespace-nowrap dark:text-white"}
-       "Mega App"]]]
+       "CRM"]]]
     [:div
      {:class "flex items-center"}
+
      [:div
       {:class "flex items-center ms-3"}
       [:div
@@ -85,7 +86,7 @@
         [:img
          {:class "w-8 h-8 rounded-full",
           :src
-          "https://flowbite.com/docs/images/people/profile-picture-5.jpg",
+          "https://avatars.githubusercontent.com/u/22116887?v=4"
           :alt "user photo"}]]]
       [:div
        {:class

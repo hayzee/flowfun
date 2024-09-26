@@ -1,7 +1,7 @@
 (ns flowfun.layout.panel
   (:require [flowfun.pages.core :as pages-core]
             [reagent.core :as r]
-            [flowfun.components.panel-row :refer [row-n]]
+            [flowfun.layout.panel-row :refer [row-of-n]]
             [flowfun.state :as state]
             [flowfun.pages.example :as example]))
 
@@ -25,7 +25,7 @@
        :id          "email",
        :class
        "bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500",
-       :placeholder "name@flowbite.com",
+       :placeholder "hayzee@petersoft.com",
        :required    ""}]]
     [:div
      {:class "mb-5"}
@@ -61,23 +61,15 @@
       "text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"}
      "Submit"]]])
 
-
-(defn start-page
-  []
-  [:div
-   {:class
-    "p-4 border-2 border-gray-200 border-dashed rounded-lg dark:border-gray-700 mt-14"}
-   [row-n 1]])
-
 (defn some-other-page
   []
   [:div
    {:class
     "p-4 border-2 border-gray-200 border-dashed rounded-lg dark:border-gray-700 mt-14"}
-   [row-n 1 [form-content]]
-   [row-n 2 [form-content] [form-content]]
-   [row-n 3 [form-content] [form-content] [form-content]]
-   [row-n 4 [form-content] [form-content] [form-content] [form-content]]])
+   [row-of-n 1 [form-content]]
+   [row-of-n 2 [form-content] [form-content]]
+   [row-of-n 3 [form-content] [form-content] [form-content]]
+   [row-of-n 4 [form-content] [form-content] [form-content] [form-content]]])
 
 (defn form-layout
   []
@@ -195,5 +187,5 @@
 (defn component
   []
   [:div
-   {:class "p-4 sm:ml-64"}
+   {:class "mt-2 p-4 sm:ml-64"}
    [(get pages-core/pages (:current-page @state/app))]])

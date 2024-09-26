@@ -1,6 +1,6 @@
-(ns flowfun.components.panel-row)
+(ns flowfun.layout.panel-row)
 
-(defn row-n
+(defn row-of-n
   [n & components]
   (let [classes (if (< n 2)
                   "grid gap-4 mb-4"
