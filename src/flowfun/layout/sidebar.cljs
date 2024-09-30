@@ -93,4 +93,5 @@
     [:ul
      {:class "pt-4 mt-4 space-y-2 font-medium border-t border-gray-200 dark:border-gray-700"}
      [menu-item "Example Page" :on-click #(state/set-current-page pages-core/example-page)]
-     [menu-item "Example2 Page" :on-click #(state/set-current-page pages-core/example-02-page)]]]])
+     [menu-item "Example2 Page" :on-click #(state/set-current-page pages-core/example-02-page)]
+     [menu-item "Blank Page" :on-click #(state/set-current-page pages-core/blank-page)]]]])
