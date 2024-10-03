@@ -1,9 +1,7 @@
 (ns flowfun.layout.panel
   (:require [flowfun.pages.core :as pages-core]
             [reagent.core :as r]
-            [flowfun.layout.panel-row :refer [row-of-n]]
-            [flowfun.state :as state]
-            [flowfun.pages.example :as example]))
+            [flowfun.state :as state]))
 
 (defn component
   []

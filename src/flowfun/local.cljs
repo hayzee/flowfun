@@ -13,6 +13,6 @@
   (.removeItem js/localStorage item))
 
 (defn clear
-  [item value]
+  []
   (.clear js/localStorage))
 
