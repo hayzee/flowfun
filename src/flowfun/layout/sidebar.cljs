@@ -87,12 +87,12 @@
     {:class "h-full px-3 pb-4 overflow-y-auto bg-white dark:bg-gray-800"}
     [:ul
      {:class "space-y-2 font-medium"}
-     [menu-item "Example Page" :on-click #(state/set-current-page pages-core/example-page)]
-     [menu-item-with-pill "Another page" "Go" :on-click #(state/set-current-page pages-core/example-02-page)]
-     [menu-item-with-counter "Inbox" "3" :on-click #(state/set-current-page pages-core/example-page)]]
+     [menu-item "Menu Item" :on-click #(state/set-current-page pages-core/example-page)]
+     [menu-item-with-pill "Menu Item Pill" "Go" :on-click #(state/set-current-page pages-core/example-02-page)]
+     [menu-item-with-counter "Menu Item Counter" "3" :on-click #(state/set-current-page pages-core/blank-page)]]
     [:ul
      {:class "pt-4 mt-4 space-y-2 font-medium border-t border-gray-200 dark:border-gray-700"}
-     [menu-item "Example Page" :on-click #(state/set-current-page pages-core/example-page)]
-     [menu-item "Example2 Page" :on-click #(state/set-current-page pages-core/example-02-page)]
      [menu-item "Blank Page" :on-click #(state/set-current-page pages-core/blank-page)]
+     [menu-item "Second Group 1" :on-click #(state/set-current-page pages-core/example-page)]
+     [menu-item "Example2 Page" :on-click #(state/set-current-page pages-core/example-02-page)]
      [menu-item "Widgets" :on-click #(state/set-current-page pages-core/widgets-page)]]]])

@@ -16,3 +16,4 @@ pom.xml.asc
 /node_modules/
 /flowfun.iml
 /public/js/
+/.clj-kondo/
