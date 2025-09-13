@@ -5,7 +5,7 @@
 
 (defn component
   []
-  [:viewport
+  [:<>
    [nav/component]
    [sidebar/component]
    [panel/component]])
