@@ -7,7 +7,15 @@
 (defn component
   []
   [:<>
+
+   ; top nav
    [nav/component]
+
+   ; left menu
    [sidebar/component]
+
+   ; main content
    [panel/component]
-   [confirm/component "popup-modal"]])
+
+   ; modal
+   [confirm/modal-container]])

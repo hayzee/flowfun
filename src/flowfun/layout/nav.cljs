@@ -34,16 +34,20 @@
          :fill-rule "evenodd",
          :d
          "M2 4.75A.75.75 0 012.75 4h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 4.75zm0 10.5a.75.75 0 01.75-.75h7.5a.75.75 0 010 1.5h-7.5a.75.75 0 01-.75-.75zM2 10a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 10z"}]]]
+     [:span
+      {:class
+       "self-center text-xl font-semibold sm:text-2xl whitespace-nowrap dark:text-white"}
+      "\uD83D\uDD25"]
      [:a
       {:href "https://github.com/hayzee/flowfun", :class "flex ms-2 md:me-24"}
       [:img
        {:src "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Mega_Brands_logo.png/800px-Mega_Brands_logo.png",
           :class "h-8 me-3 mb-3",
-        :alt "Petersoft Logo"}]
+        :alt "Megarsoft Logo"}]
       [:span
        {:class
         "self-center text-xl font-semibold sm:text-2xl whitespace-nowrap dark:text-white"}
-       "CRM"]]]
+       "\uD83D\uDD25"]]]
 
 
     ; nav centre
