@@ -10,6 +10,9 @@
    {:class "px-3 py-3 lg:px-5 lg:pl-3"}
    [:div
     {:class "flex items-center justify-between"}
+
+    ; nav left
+
     [:div
      {:class "flex items-center justify-start rtl:justify-end"}
      [:button
@@ -42,6 +45,9 @@
         "self-center text-xl font-semibold sm:text-2xl whitespace-nowrap dark:text-white"}
        "CRM"]]]
 
+
+    ; nav centre
+
     #_[:div
      {:class "flex items-center"}
      [:span
@@ -50,13 +56,15 @@
       "Super App."]
      ]
 
+    ; nav right
+
     [:div
      {:class "flex items-center"}
 
-     [:div
+     ; search
+
+     #_[:div
       {:class "flex items-center ms-3"}
-
-
       [:div
        {:class "flex md:order-2"}
        [:button
@@ -122,8 +130,9 @@
            :stroke-linecap "round",
            :stroke-linejoin "round",
            :stroke-width "2",
-           :d "M1 1h15M1 7h15M1 13h15"}]]]]
-      ]
+           :d "M1 1h15M1 7h15M1 13h15"}]]]]]
+
+     ; light/dark
 
      [:div
       {:class "flex items-center ms-3"}
@@ -154,6 +163,9 @@
            "M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z",
            :fill-rule "evenodd",
            :clip-rule "evenodd"}]]]]]
+
+     ; user icon + dropdown menu
+
      [:div
       {:class "flex items-center ms-3"}
       [:div
@@ -213,4 +225,7 @@
            "block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-600 dark:hover:text-white",
            :role "menuitem"}
           "Sign out"]]]]]
-     ]]]])
+
+     ]
+
+    ]]])
