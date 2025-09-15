@@ -2,28 +2,20 @@
   [:require [flowfun.utilities.css :as css]
             [reagent.core :as r]])
 
-;(defn button-thing
-;  [modal-element-id]
-;  [:button
-;   {:data-modal-target modal-element-id
-;    :data-modal-toggle modal-element-id
-;    :class "block text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-;    :type  "button"}
-;   "Toggle modal"])
-
-
 (defn component
-  [element-id & {:keys [prompt yes-text no-text f-on-close]
+  [element-id & {:keys [prompt yes-text no-text f-on-close f-on-yes f-on-no]
                  :or {prompt "Aye you sure you wish to proceed?"
                       yes-text "OK"
                       no-text "Cancel"
-                      f-on-close #(js/alert "close")}}]
+                      f-on-close #(js/alert "close")
+                      f-on-yes #(js/alert "yes")
+                      f-on-no #(js/alert "no")}}]
   [:div
    {:id       element-id
     :tabindex "-1"
-    :class
-    ; hidden
-    " overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full"}
+    :data-modal-placement "top-right"
+    :class "overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full"
+    }
    [:div
     {:class "relative p-4 w-full max-w-md max-h-full"}
     [:div
@@ -70,7 +62,7 @@
         :class
         ;"text-white bg-red-600 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800 font-medium rounded-lg text-sm inline-flex items-center px-5 py-2.5 text-center"
         "text-white bg-blue-600 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm inline-flex items-center px-5 py-2.5 text-center"
-        :on-click #(js/alert "yes")
+        :on-click f-on-yes
         }
        yes-text]
       [:button
@@ -78,40 +70,6 @@
         :type            "button"
         :class
         "py-2.5 px-5 ms-3 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
-        :on-click #(js/alert "no")
+        :on-click f-on-no
         }
        no-text]]]]])
-
-(defn show
-  [element-id]
-  (css/remove-class (.getElementById js/document element-id) "hidden"))
-
-(defn hide
-  [element-id]
-  (css/add-class (.getElementById js/document element-id) "hidden"))
-
-(def current-modal
-  (r/atom nil))
-
-(defn modal-container
-  []
-
-  [:<>
-   @current-modal]
-  nil
-  @current-modal)
-
-(defn set-modal
-  [modal]
-  (swap! current-modal modal))
-
-
-(comment
-  ; e.g.
-
-  (set-modal (partial component "mymodal" :prompt "Are you well?"))
-
-  (set-modal (constantly nil))
-
-
-  )

@@ -2,7 +2,7 @@
   (:require [flowfun.layout.nav :as nav]
             [flowfun.layout.sidebar :as sidebar]
             [flowfun.layout.panel :as panel]
-            [flowfun.components.modals.confirm :as confirm]))
+            [flowfun.components.modals.core :as modals]))
 
 (defn component
   []
@@ -18,4 +18,4 @@
    [panel/component]
 
    ; modal
-   [confirm/modal-container]])
+   [modals/current-modal]])
