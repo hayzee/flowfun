@@ -1,6 +1,7 @@
 (ns flowfun.layout.sidebar
   (:require [flowfun.state :as state]
-            [flowfun.pages.core :as pages-core]))
+            [flowfun.pages.core :as pages-core]
+            [flowfun.components.modals.core :as modals]))
 
 (defn menu-item
   [text & {:as opts}]
@@ -95,4 +96,10 @@
      [menu-item "Blank Page" :on-click #(state/set-current-page pages-core/blank-page)]
      [menu-item "Second Group 1" :on-click #(state/set-current-page pages-core/example-page)]
      [menu-item "Example2 Page" :on-click #(state/set-current-page pages-core/example-02-page)]
-     [menu-item "Widgets" :on-click #(state/set-current-page pages-core/widgets-page)]]]])
+     [menu-item "Widgets" :on-click #(state/set-current-page pages-core/widgets-page)]]
+    [:ul
+     {:class "pt-4 mt-4 space-y-2 font-medium border-t border-gray-200 dark:border-gray-700"}
+
+
+
+     [menu-item "Modal" :on-click #(modals/set-modal modals/are-you-well-modal)]]]])

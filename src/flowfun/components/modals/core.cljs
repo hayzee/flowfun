@@ -8,7 +8,7 @@
 
 (defn current-modal
   []
-  @current-modal-fn)
+  (deref current-modal-fn))
 
 (defn set-modal
   [modal]
