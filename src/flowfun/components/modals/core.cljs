@@ -22,7 +22,7 @@
     :yes-text "Yep"
     :no-text "Nope"
     :f-on-close (fn [e]
-                  (js/alert "Cancelled.")
+                  (js/alert "I'll take that as a No!")
                   (set-modal nil))
     :f-on-yes (fn [e]
                 (js/alert "Excellent News.")

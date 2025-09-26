@@ -2,7 +2,9 @@
   (:require [flowfun.layout.nav :as nav]
             [flowfun.layout.sidebar :as sidebar]
             [flowfun.layout.panel :as panel]
-            [flowfun.components.modals.core :as modals]))
+            [flowfun.components.modals.core :as modals]
+
+            [flowfun.components.toast.core :as toast]))
 
 (defn component
   []
@@ -18,4 +20,6 @@
    [panel/component]
 
    ; modal
-   [modals/current-modal]])
+   [modals/current-modal]
+
+   [toast/container]])

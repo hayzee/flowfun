@@ -18,7 +18,7 @@
    [:div
     {:class "p-4 w-full max-w-md max-h-full"}
     [:div
-     {:class "relative bg-white rounded-lg shadow-sm dark:bg-gray-800"}
+     {:class "relative rounded-lg shadow-sm bg-blue-300 dark:bg-blue-900"}
      [:button
       {:type            "button"
        :class
