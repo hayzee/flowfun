@@ -1,5 +1,6 @@
 (ns flowfun.components.modals.core
   [:require [flowfun.components.modals.confirm :as confirm]
+            [flowfun.components.toast.core :as toast]
             [reagent.core :as r]])
 
 
@@ -22,14 +23,14 @@
     :yes-text "Yep"
     :no-text "Nope"
     :f-on-close (fn [e]
-                  (js/alert "I'll take that as a No!")
+                  (toast/create-toast "I'll take that as a No!" :color "yellow")
                   (set-modal nil))
     :f-on-yes (fn [e]
-                (js/alert "Excellent News.")
+                (toast/create-toast "Excellent News." :color "green")
                 (set-modal nil)
                 #_(set! (.-location js/window) "http://www.google.com"))
     :f-on-no (fn [e]
-               (js/alert "That is a terrible shame.")
+               (toast/create-toast "That is a terrible shame." :color "red")
                (set-modal nil))))
 
 (comment

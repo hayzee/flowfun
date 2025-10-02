@@ -1,7 +1,9 @@
 (ns flowfun.layout.sidebar
   (:require [flowfun.state :as state]
             [flowfun.pages.core :as pages-core]
-            [flowfun.components.modals.core :as modals]))
+            [flowfun.components.modals.core :as modals]
+            [flowfun.components.toast.core :as toast]
+            [flowfun.components.toast.pushnotify :as push-toast]))
 
 (defn menu-item
   [text & {:as opts}]
@@ -99,7 +101,13 @@
      [menu-item "Widgets" :on-click #(state/set-current-page pages-core/widgets-page)]]
     [:ul
      {:class "pt-4 mt-4 space-y-2 font-medium border-t border-gray-200 dark:border-gray-700"}
-
-
-
-     [menu-item "Modal" :on-click #(modals/set-modal modals/are-you-well-modal)]]]])
+     [menu-item "Modal" :on-click #(modals/set-modal modals/are-you-well-modal)]
+     [menu-item "Blue Toast" :on-click #(toast/create-toast (str "This is toast message - " (rand-int 1000)) :color "blue")]
+     [menu-item "Red toast" :on-click #(toast/create-toast (str "This is toast message - " (rand-int 1000)) :color "red")]
+     [menu-item "Yellow toast" :on-click #(toast/create-toast (str "This is toast message - " (rand-int 1000)) :color "yellow")]
+     [menu-item "Green toast" :on-click #(toast/create-toast (str "This is toast message - " (rand-int 1000)) :color "green")]
+     [menu-item "Purple toast" :on-click #(toast/create-toast (str "This is toast message - " (rand-int 1000)) :color "purple")]
+     [menu-item "Gray toast" :on-click #(toast/create-toast (str "This is toast message - " (rand-int 1000)) :color "gray")]
+     [menu-item "Indigo toast" :on-click #(toast/create-toast (str "This is toast message - " (rand-int 1000)) :color "indigo")]
+     [menu-item "Pink toast" :on-click #(toast/create-toast (str "This is toast message - " (rand-int 1000)) :color "pink")]
+     [menu-item "Push toast" :on-click #(push-toast/create-push-toast)]]]])

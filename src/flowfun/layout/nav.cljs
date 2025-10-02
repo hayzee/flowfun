@@ -43,7 +43,7 @@
       [:img
        {:src "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Mega_Brands_logo.png/800px-Mega_Brands_logo.png",
           :class "h-8 me-3 mb-3",
-        :alt "Megarsoft Logo"}]
+        :alt "Megasoft Logo"}]
       [:span
        {:class
         "self-center text-xl font-semibold sm:text-2xl whitespace-nowrap dark:text-white"}
