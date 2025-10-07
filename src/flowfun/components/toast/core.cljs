@@ -24,7 +24,7 @@
    {:id id
     :key id
     :class
-    (str "flex items-center w-full max-w-xs m-2 p-4 text-gray-500 bg-" color "-300 rounded-lg shadow-sm dark:text-gray-400 dark:bg-" color "-900")
+    (str "flex items-center w-full max-w-xs m-2 p-4 text-gray-800 bg-" color "-300 rounded-lg shadow-sm dark:text-gray-100 dark:bg-" color "-900")
     :role "alert"
     :on-click (fn [event_] (css/fadeout id :callback remove-one-toast))}
    [:div {:class "text-sm font-normal"} message]

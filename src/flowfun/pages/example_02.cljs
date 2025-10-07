@@ -7,6 +7,7 @@
   [:div
    {:class
     "px-4 pt-4 border-2 border-gray-200 border-dashed rounded-lg dark:border-gray-700 mt-14"}
+   [:h1 {:class "mb-4 text-2xl font-medium tracking-tight leading-none text-gray-900 md:text-3xl lg:text-4xl dark:text-white"} "Section Header"]
    [panel-row/row-of-n 8 [dummy/stateful-component] [dummy/stateful-component] [dummy/stateless-component] [dummy/stateful-component] [dummy/stateful-component] [dummy/stateful-component] [dummy/stateless-component] [dummy/stateful-component]]
    [panel-row/row-of-n 3 [dummy/stateful-component] [dummy/stateless-component] [dummy/stateful-component]]
    [panel-row/row-of-n 2 [dummy/stateful-component] [dummy/stateful-component]]
