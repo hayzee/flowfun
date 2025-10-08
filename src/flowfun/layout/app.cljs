@@ -3,7 +3,6 @@
             [flowfun.layout.sidebar :as sidebar]
             [flowfun.layout.panel :as panel]
             [flowfun.components.modals.core :as modals]
-
             [flowfun.components.toast.core :as toast]))
 
 (defn component
@@ -22,4 +21,5 @@
    ; modal
    [modals/current-modal]
 
+   ; toast
    [toast/container]])
