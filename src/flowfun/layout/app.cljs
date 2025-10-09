@@ -3,7 +3,8 @@
             [flowfun.layout.sidebar :as sidebar]
             [flowfun.layout.panel :as panel]
             [flowfun.components.modals.core :as modals]
-            [flowfun.components.toast.core :as toast]))
+            [flowfun.components.toast.core :as toast]
+            [flowfun.components.drawer.core :as drawer]))
 
 (defn component
   []
@@ -18,8 +19,11 @@
    ; main content
    [panel/component]
 
-   ; modal
+   ; alert / modal
    [modals/current-modal]
 
-   ; toast
-   [toast/container]])
+   ; disappearing toast
+   [toast/container]
+
+   ; toggle drawer
+   [drawer/component]])

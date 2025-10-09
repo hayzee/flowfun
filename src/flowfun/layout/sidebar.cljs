@@ -2,7 +2,8 @@
   (:require [flowfun.state :as state]
             [flowfun.pages.core :as pages-core]
             [flowfun.components.modals.core :as modals]
-            [flowfun.components.toast.pushnotify :as push-toast]))
+            [flowfun.components.toast.pushnotify :as push-toast]
+            [flowfun.components.drawer.core :as drawer]))
 
 (defn menu-item
   [text & {:as opts}]
@@ -102,4 +103,5 @@
     [:ul
      {:class "pt-4 mt-4 space-y-2 font-medium border-t border-gray-200 dark:border-gray-700"}
      [menu-item "Modal" :on-click #(modals/set-modal modals/are-you-well-modal)]
-     [menu-item "Push toast" :on-click #(push-toast/create-push-toast)]]]])
+     [menu-item "Push toast" :on-click #(push-toast/create-push-toast)]
+     [menu-item "Drawer" :on-click #(drawer/toggle-drawer)]]]])
