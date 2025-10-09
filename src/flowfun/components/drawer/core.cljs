@@ -100,7 +100,7 @@
 (def options #js {
               :placement     "right"
               :backdrop      true
-              :bodyScrolling true
+              :bodyScrolling false
               :edge          false
               :edgeOffset    ""
               :backdropClasses "bg-gray-900/5 0 dark:bg-gray-900/8 0 fixed inset-0 z-30",
