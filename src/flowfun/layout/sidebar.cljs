@@ -103,5 +103,4 @@
     [:ul
      {:class "pt-4 mt-4 space-y-2 font-medium border-t border-gray-200 dark:border-gray-700"}
      [menu-item "Modal" :on-click #(modals/set-modal modals/are-you-well-modal)]
-     [menu-item "Push toast" :on-click #(push-toast/create-push-toast)]
-     [menu-item "Drawer" :on-click #(drawer/toggle-drawer)]]]])
+     [menu-item "Push toast" :on-click #(push-toast/create-push-toast)]]]])

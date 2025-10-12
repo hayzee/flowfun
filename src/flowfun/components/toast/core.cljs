@@ -12,7 +12,7 @@
   []
   [:div
    {:id    "toast-container"
-    :class "right-5 bottom-5 fixed"}
+    :class "z-50 right-5 bottom-5 fixed"}
    [:<>
     (for [toast @toasts]
       toast)]])
@@ -34,7 +34,7 @@
      {:class
       (str "text-sm font-medium text-" color "-600 p-1.5 hover:bg-" color "-100 rounded-lg dark:text-" color "-500 dark:hover:bg-gray-700")
       :href "#"}
-     "Undo"]
+     "More"]
     [:button
      {:type         "button"
       :class

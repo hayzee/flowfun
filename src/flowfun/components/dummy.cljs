@@ -21,6 +21,20 @@
 
 (defn stateful-component
   []
+  (r/with-let
+    [n (r/atom 1)]
+    [:div
+     {:class    "flex items-center justify-center h-36 rounded bg-gray-50 dark:bg-gray-700"
+      :on-click #(swap! n inc)}
+     [:p
+      {:class "text-2xl text-gray-400 dark:text-gray-500"}
+      @n]]
+    (finally
+      (println "unmount stateful component"))
+    ))
+
+(defn stateful-component-old
+  []
   (let [n (r/atom 0)]
     (fn []
       [:div

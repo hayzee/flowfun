@@ -21,9 +21,10 @@
    {:id              "drawer-right-example",
     :class
     ;"fixed top-0 right-0 z-40 h-screen p-4 overflow-y-auto transition-transform translate-x-full bg-white w-80 dark:bg-gray-800"
-    "pt-20 fixed top-0 right-0 z-90 h-screen p-4 overflow-y-auto transition-transform translate-x-full bg-white w-80 dark:bg-gray-800",
-    :tabindex        "-1",
-    :aria-labelledby "drawer-right-label"}
+    "pt-20 fixed top-0 right-0 z-40 h-screen p-4 overflow-y-auto transition-transform translate-x-full bg-white w-80 dark:bg-gray-800",
+    :tab-index        "-1",
+    ;:aria-labelledby "drawer-right-label"
+    }
    [:h5
     {:id "drawer-right-label",
      :class
@@ -40,8 +41,8 @@
     "Right drawer"]
    [:button
     {:type             "button",
-     :data-drawer-hide "drawer-right-example",
-     :aria-controls    "drawer-right-example",
+     ;:data-drawer-hide "drawer-right-example",
+     ;:aria-controls    "drawer-right-example",
      :class
      "text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 absolute top-2.5 end-2.5 inline-flex items-center justify-center dark:hover:bg-gray-600 dark:hover:text-white"}
     [:svg
@@ -68,6 +69,24 @@
     "for Flowbite Docs + Job Board. Unlimited access to over 190K top-ranked candidates and the #1 design job board."]
    [:div
     {:class "grid grid-cols-2 gap-4"}
+    [:label.inline-flex.items-center.cursor-pointer
+     [:input.sr-only.peer {:type "checkbox" :value ""}]
+     [:div.relative.w-11.h-6.bg-gray-200.peer-focus:outline-none.peer-focus:ring-4.peer-focus:ring-blue-300.dark:peer-focus:ring-blue-800.rounded-full.peer.dark:bg-gray-700.peer-checked:after:translate-x-full.rtl:peer-checked:after:-translate-x-full.peer-checked:after:border-white.after:absolute.after:bg-white.after:border-gray-300.after:border.after:rounded-full.after:h-5.after:w-5.after:transition-all.dark:border-gray-600.peer-checked:bg-blue-600.dark:peer-checked:bg-blue-600 {:class "after:content-[''] after:top-[2px] after:start-[2px]"}]
+     [:span.ms-3.text-sm.font-medium.text-gray-900.dark:text-gray-300 "Roisin"]]
+
+    [:label.inline-flex.items-center.cursor-pointer
+     [:input.sr-only.peer {:type "checkbox" :value ""}]
+     [:div.relative.w-11.h-6.bg-gray-200.peer-focus:outline-none.peer-focus:ring-4.peer-focus:ring-blue-300.dark:peer-focus:ring-blue-800.rounded-full.peer.dark:bg-gray-700.peer-checked:after:translate-x-full.rtl:peer-checked:after:-translate-x-full.peer-checked:after:border-white.after:absolute.after:bg-white.after:border-gray-300.after:border.after:rounded-full.after:h-5.after:w-5.after:transition-all.dark:border-gray-600.peer-checked:bg-blue-600.dark:peer-checked:bg-blue-600 {:class "after:content-[''] after:top-[2px] after:start-[2px]"}]
+     [:span.ms-3.text-sm.font-medium.text-gray-900.dark:text-gray-300 "Stop"]]
+
+    [:label.inline-flex.items-center.cursor-pointer
+     [:input.sr-only.peer {:type "checkbox" :value ""}]
+     [:div.relative.w-11.h-6.bg-gray-200.peer-focus:outline-none.peer-focus:ring-4.peer-focus:ring-blue-300.dark:peer-focus:ring-blue-800.rounded-full.peer.dark:bg-gray-700.peer-checked:after:translate-x-full.rtl:peer-checked:after:-translate-x-full.peer-checked:after:border-white.after:absolute.after:bg-white.after:border-gray-300.after:border.after:rounded-full.after:h-5.after:w-5.after:transition-all.dark:border-gray-600.peer-checked:bg-blue-600.dark:peer-checked:bg-blue-600 {:class "after:content-[''] after:top-[2px] after:start-[2px]"}]
+     [:span.ms-3.text-sm.font-medium.text-gray-900.dark:text-gray-300 "Being"]]
+    [:label.inline-flex.items-center.cursor-pointer
+     [:input.sr-only.peer {:type "checkbox" :value ""}]
+     [:div.relative.w-11.h-6.bg-gray-200.peer-focus:outline-none.peer-focus:ring-4.peer-focus:ring-blue-300.dark:peer-focus:ring-blue-800.rounded-full.peer.dark:bg-gray-700.peer-checked:after:translate-x-full.rtl:peer-checked:after:-translate-x-full.peer-checked:after:border-white.after:absolute.after:bg-white.after:border-gray-300.after:border.after:rounded-full.after:h-5.after:w-5.after:transition-all.dark:border-gray-600.peer-checked:bg-blue-600.dark:peer-checked:bg-blue-600 {:class "after:content-[''] after:top-[2px] after:start-[2px]"}]
+     [:span.ms-3.text-sm.font-medium.text-gray-900.dark:text-gray-300 "Naughty"]]
     [:a
      {:href "#",
       :class
@@ -100,7 +119,7 @@
 (def options #js {
               :placement     "right"
               :backdrop      true
-              :bodyScrolling false
+              :bodyScrolling true
               :edge          false
               :edgeOffset    ""
               :backdropClasses "bg-gray-900/5 0 dark:bg-gray-900/8 0 fixed inset-0 z-30",
@@ -111,7 +130,7 @@
 
 (def instanceOptions #js {
                           :id "drawer-js-example"
-                          :override true
+                          :override false
                           })
 
 ; need a delay here as the draw wont be rendered so wait until someone clicks draw
